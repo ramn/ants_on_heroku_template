@@ -1,8 +1,11 @@
 Template project for running ants on Heroku
 ===========================================
 
-Overview
---------
+Heroku project overview
+-----------------------
+Heroku wants a Procfile, which tells Heroku how to start your application. It specifies the connectAndPlay.sh script as boot script, which you don't need to change.
+
+connectAndPlay.sh will then start a dummy HTTP server in a background process, which is necessary on Heroku (otherwise the app will be shut down). Then it starts the tcpclient.py, which connects to the Ants TCP server and runs your bot. For each new game it engages, it will start your bot in a new subprocess.
 
 
 Language support
@@ -34,6 +37,14 @@ If your bot is written in anything else than python, a buildpack for your langua
 
 Heroku issues
 -------------
+An app on the free plan will be shut down after one hour of not receiving HTTP requests. This can be circumvented in several ways.
 
+### Add dyno
+Add a second dyno to your Heroku app. Then it will never be shut down, but you will have to pay a monthly fee.
+
+### Send requests to your app
+Send HTTP requests to your app regularly from a cronjob, or use some third party tool like pingdom.com.
+
+You can set up a free cronjob in Heroku, provided as an [addon](https://addons.heroku.com/catalog/schedule://addons.heroku.com/catalog/scheduler).
 
 
