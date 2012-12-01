@@ -7,6 +7,7 @@ Heroku wants a Procfile, which tells Heroku how to start your application. It sp
 
 connectAndPlay.sh will then start a dummy HTTP server in a background process, which is necessary on Heroku (otherwise the app will be shut down). Then it starts the tcpclient.py, which connects to the Ants TCP server and runs your bot. For each new game it engages, it will start your bot in a new subprocess.
 
+The requirements.txt file is there to make Heroku understand this is a python project.
 
 Language support
 ----------------
@@ -14,6 +15,7 @@ This template runs the python Ants TCP client, and can run a bot in another lang
 
 In the .buildpacks file the buildpacks must be listed. Since python is used for the tcp client, it must be included in the .buildpacks.
 
+Read more about Heroku buildpacks [here](https://devcenter.heroku.com/articles/buildpacks).
 
 
 Setup
