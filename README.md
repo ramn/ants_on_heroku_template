@@ -46,5 +46,6 @@ Add a second dyno to your Heroku app. Then it will never be shut down, but you w
 Send HTTP requests to your app regularly from a cronjob, or use some third party tool like pingdom.com.
 
 You can set up a free cronjob in Heroku, provided as an [addon](https://addons.heroku.com/catalog/schedule://addons.heroku.com/catalog/scheduler).
-
+Set up a command like this: "curl http://your-app-name.herokuapp.com/?$(date +%s)"
+that runs every ten minutes, where "your-app-name" is the name of your app.
 
