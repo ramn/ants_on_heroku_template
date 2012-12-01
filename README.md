@@ -12,6 +12,8 @@ connectAndPlay.sh will then start a dummy HTTP server in a background process, w
 
 The requirements.txt file is there to make Heroku understand this is a python project.
 
+An index.html page is provided, otherwise the dummy python web server will list all your files.
+
 
 Language support
 ----------------
