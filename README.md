@@ -8,3 +8,8 @@ The Heroku app must be configured for multi-buildpack:
 
     heroku config:set BUILDPACK_URL=https://github.com/ddollar/heroku-buildpack-multi.git
 
+The boot script takes the ant server password from ENV, so it must be set thusly:
+
+    heroku config:set ANT_SERVER_PASSWORD=mypassword
+
+
