@@ -1,6 +1,9 @@
 Template project for running ants on Heroku
 ===========================================
 
+This project shows how to set up your ant bot (for [AI Challenge](http://www.aichallenge.org/)) to run on Heroku and connect to an [Ants TCP](https://github.com/smiley1983/ants-tcp) server.
+
+
 Heroku project overview
 -----------------------
 Heroku wants a Procfile, which tells Heroku how to start your application. It specifies the connectAndPlay.sh script as boot script, which you don't need to change.
@@ -8,6 +11,7 @@ Heroku wants a Procfile, which tells Heroku how to start your application. It sp
 connectAndPlay.sh will then start a dummy HTTP server in a background process, which is necessary on Heroku (otherwise the app will be shut down). Then it starts the tcpclient.py, which connects to the Ants TCP server and runs your bot. For each new game it engages, it will start your bot in a new subprocess.
 
 The requirements.txt file is there to make Heroku understand this is a python project.
+
 
 Language support
 ----------------
