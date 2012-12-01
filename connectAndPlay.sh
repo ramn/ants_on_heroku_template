@@ -2,7 +2,7 @@ TCPCLIENT=tcpclient.py
 IP=106.187.94.97 # IP of Ants tcp server
 ANT_PORT=2085 # Port for Beginners hill
 
-BOT_COMMAND='path/to/my/bot.py'
+BOT_COMMAND='python path/to/my/bot.py'
 ANT_SERVER_USER=MyBot
 NUM_ROUNDS=-1 # Set to -1 to run infinitely
 
