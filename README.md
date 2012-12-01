@@ -5,5 +5,6 @@ This template runs the python Ants TCP client, and can run a bot in another lang
 In the .buildpacks file the buildpacks must be listed.
 
 The Heroku app must be configured for multi-buildpack:
+
     heroku config:set BUILDPACK_URL=https://github.com/ddollar/heroku-buildpack-multi.git
 
