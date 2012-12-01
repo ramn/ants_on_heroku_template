@@ -59,4 +59,4 @@ Set up a command like this:
     curl http://your-app-name.herokuapp.com/?$(date +%s)
 
 that runs every ten minutes, where "your-app-name" is the name of your app.
-
+It seems the scheduler addon requires you to enter your credit card.
